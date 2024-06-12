@@ -1,0 +1,27 @@
+name = "xmin"
+description = "eXtremely Minimal Zola theme"
+license = "MIT"
+homepage = "https://github.com/mangkoran/zola-xmin"
+min_version = "0.18.0"
+demo = "https://xmin.mangkoran.com"
+
+[extra]
+[extra.menus]
+main = [
+  { name = "Home", url = "" },
+  { name = "Blog", url = "blog/" },
+  # { name = "Tags", url = "tags/" },
+  { name = "About", url = "about/" },
+]
+
+[extra.params]
+footer = "&copy; [mangkoran](https://blog.mangkoran.com) 2024 – {Year} | [Github](https://github.com/mangkoran) | [Twitter](https://twitter.com/mangkoran)"
+
+[author]
+name = "Afiq Nazrie"
+homepage = "https://blog.mangkoran.com"
+
+[original]
+author = "Yihui Xie"
+homepage = "https://yihui.org"
+repo = "https://www.github.com/yihui/hugo-xmin"

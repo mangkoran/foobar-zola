@@ -1,0 +1,17 @@
+/* body { */
+/*   font-family: STIX Two Text, serif; */
+/* } */
+/* code { */
+/*   font-family: IBM Plex Mono, Lucida Console, Monaco, monospace; */
+/*   font-size: 85%; */
+/* } */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: Rubik, Optima, Candara, Calibri, Arial, sans-serif; */
+  font-weight: 500;
+}

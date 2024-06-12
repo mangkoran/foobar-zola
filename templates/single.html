@@ -1,0 +1,29 @@
+{% include "partials/header.html" %}
+
+<div class="blog-meta">
+  <style>
+    me { 
+      text-decoration: none; 
+      background: var(--md-sys-color-surface-container-high); 
+      font-size: large; 
+      margin: 0 auto 1em; 
+      padding: 2em 0;
+      /* border: 1px solid; */
+      text-align: center; 
+    }
+  </style>
+  {% if page.date %}
+  <p>
+    <style> me { margin: 0 0 0.5em; font-family: STIX Two Text, serif; } </style>
+    {{ page.date | markdown(inline=true) | date(format="%d %B %Y") | safe }}
+  </p>
+  {% endif %}
+  <h1>
+    <style> me { margin: 0 } </style>
+    {{ page.title | markdown(inline=true) | safe }}
+  </h1>
+</div>
+
+<main>{{ page.content | safe }}</main>
+
+{% include "partials/footer.html" %}

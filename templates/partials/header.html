@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="css/fonts.css") }}" />
+    <script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gnat/surreal@main/surreal.js"></script>
+    <title>
+      {% if page.title %} {{ page.title }}
+      {% elif section.title %} {{ section.title }}
+      {% elif taxonomy.name %} {{ taxonomy.name }}
+      {% endif %} | {{ config.title }}
+    </title>
+    {% include "partials/head_custom.html" %}
+  </head>
+
+  <body>
+    <nav>
+      <style>
+        me { background-color: tomato; padding: 2em 0 1em; }
+      </style>
+      <ul class="menu">
+        <style>
+          me { margin: 0; padding: 0; text-align: center; }
+          me a, me button {
+            text-decoration: none;
+            padding: 5px;
+            color: var(--md-sys-color-on-surface);
+            line-height: 1.0;
+          }
+          me a, me li { display: inline-block; }
+        </style>
+        {% for page in config.extra.menus.main %}
+        <li><a href="{{ get_url(path=page.url, trailing_slash=true) }}">{{ page.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
