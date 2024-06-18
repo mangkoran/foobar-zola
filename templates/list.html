@@ -1,16 +1,14 @@
-{% include "partials/header.html" %}
+{% extends "single.html" %} {% block list %}
 
-<main>
-  {{ section.content | safe }}
+<ol class="[ post-list ] [ flow ]">
+  {% for page in section.pages %}
+  <li class="[ post-list__item ] [ leading-tight measure-long ]">
+    <span class="date">{{ page.date }}</span>
+    <a href="{{ page.permalink }}" class="post-list__link">
+      {{ page.title | markdown(inline=true) | safe }}
+    </a>
+  </li>
+  {% endfor %}
+</ol>
 
-  <ul>
-    {% for page in section.pages %}
-    <li>
-      <span class="date">{{ page.date }}</span>
-      <a href="{{ page.permalink }}">{{ page.title | markdown(inline=true) | safe }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</main>
-
-{% include "partials/footer.html" %}
+{% endblock %}

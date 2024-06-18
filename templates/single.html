@@ -1,29 +1,14 @@
-{% include "partials/header.html" %}
+{% extends "index.html" %} {% block content %}
 
-<div class="blog-meta">
-  <style>
-    me { 
-      text-decoration: none; 
-      background: var(--md-sys-color-surface-container); 
-      font-size: large; 
-      margin: 0 auto 1em; 
-      padding: 2em 0;
-      /* border: 1px solid; */
-      text-align: center; 
-    }
-  </style>
-  {% if page.date %}
-  <p>
-    <style> me { margin: 0 0 0.5em; font-family: STIX Two Text, serif; } </style>
-    {{ page.date | markdown(inline=true) | date(format="%d %B %Y") | safe }}
-  </p>
-  {% endif %}
+<article>
   <h1>
-    <style> me { margin: 0 } </style>
-    {{ page.title | markdown(inline=true) | safe }}
+    {% if page.title %} {{ page.title | markdown(inline=true) | safe }} {% elif
+    section.title %} {{ section.title | markdown(inline=true) | safe }} {% elif
+    taxonomy.name %} {{ taxonomy.name | markdown(inline=true) | safe }} {% endif
+    %} | {{ config.title | markdown(inline=true) | safe }}
   </h1>
-</div>
+  {% if page.content %} {{ page.content | safe }} {% elif section.content %} {{
+  section.content | safe }} {% endif %} {% block list %}{% endblock %}
+</article>
 
-<main>{{ page.content | safe }}</main>
-
-{% include "partials/footer.html" %}
+{% endblock %}

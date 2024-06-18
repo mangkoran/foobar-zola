@@ -1,9 +1,9 @@
-name = "xmin"
-description = "eXtremely Minimal Zola theme"
+name = "foobar-zola"
+description = ""
 license = "MIT"
-homepage = "https://github.com/mangkoran/zola-xmin"
-min_version = "0.18.0"
-demo = "https://xmin.mangkoran.com"
+homepage = "https://github.com/mangkoran/foobar-zola"
+min_version = ""
+demo = "https://foobar-zola.mangkoran.com"
 
 [extra]
 [extra.menus]
@@ -14,14 +14,6 @@ main = [
   { name = "About", url = "about/" },
 ]
 
-[extra.params]
-footer = "&copy; [mangkoran](https://blog.mangkoran.com) 2024 – {Year} | [Github](https://github.com/mangkoran) | [Twitter](https://twitter.com/mangkoran)"
-
 [author]
-name = "Afiq Nazrie"
+name = "mangkoran"
 homepage = "https://blog.mangkoran.com"
-
-[original]
-author = "Yihui Xie"
-homepage = "https://yihui.org"
-repo = "https://www.github.com/yihui/hugo-xmin"

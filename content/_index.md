@@ -1,6 +1,6 @@
 +++
 title = "Home"
-template = "list.html"
+template = "single.html"
 page_template = "single.html"
 +++
 
