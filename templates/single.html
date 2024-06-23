@@ -5,7 +5,7 @@
     {% if page.title %} {{ page.title | markdown(inline=true) | safe }} {% elif
     section.title %} {{ section.title | markdown(inline=true) | safe }} {% elif
     taxonomy.name %} {{ taxonomy.name | markdown(inline=true) | safe }} {% endif
-    %} | {{ config.title | markdown(inline=true) | safe }}
+    %}
   </h1>
   {% if page.content %} {{ page.content | safe }} {% elif section.content %} {{
   section.content | safe }} {% endif %} {% block list %}{% endblock %}

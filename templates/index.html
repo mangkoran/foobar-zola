@@ -9,10 +9,9 @@
     <title>
       {% if page.title %} {{ page.title }} {% elif section.title %} {{
       section.title }} {% elif taxonomy.name %} {{ taxonomy.name }} {% endif %}
-      | {{ config.title }}
     </title>
+    <link rel="stylesheet" href="{{ get_url(path='css/reset.css') }}" />
     <link rel="stylesheet" href="{{ get_url(path='css/style.css') }}" />
-    <link rel="stylesheet" href="{{ get_url(path='css/fonts.css') }}" />
   </head>
   <body>
     <header role="banner" class="site-head">

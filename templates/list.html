@@ -1,6 +1,6 @@
 {% extends "single.html" %} {% block list %}
 
-<ol class="[ post-list ] [ flow ]">
+<ul class="[ post-list ] [ flow ]">
   {% for page in section.pages %}
   <li class="[ post-list__item ] [ leading-tight measure-long ]">
     <span class="date">{{ page.date }}</span>
@@ -9,6 +9,6 @@
     </a>
   </li>
   {% endfor %}
-</ol>
+</ul>
 
 {% endblock %}
