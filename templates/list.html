@@ -4,7 +4,7 @@
   {% for page in section.pages %}
   <li class="[ post-list__item ] [ leading-tight measure-long ]">
     <span class="date">{{ page.date }}</span>
-    <a href="{{ page.permalink }}" class="post-list__link">
+    <a href="{{ page.permalink | trim_end_matches(pat='/') | safe }}" class="post-list__link">
       {{ page.title | markdown(inline=true) | safe }}
     </a>
   </li>
