@@ -4,4 +4,4 @@ title = "About"
 hide_default_author = true
 +++
 
-This is my about page.
+This is the about page of **foobar-zola**.
