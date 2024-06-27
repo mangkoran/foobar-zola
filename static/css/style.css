@@ -1,35 +1,3 @@
-main,
-header {
-  hyphens: auto;
-  font-size: large;
-}
-
-body {
-  font-family: serif;
-  line-height: 1.3;
-  margin: 2em auto;
-  max-width: min(800px, calc(100% - 4em));
-}
-
-code {
-  font-family: monospace;
-  /* font-size: 80%; */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: sans-serif;
-  font-weight: 600;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-
 ul.nav__list {
   margin: 0;
   padding: 0;
@@ -40,5 +8,5 @@ ul.nav__list li {
 }
 
 ul.nav__list li:not(:last-child) {
-  margin: 0 0.2em 0 0;
+  margin: 0 0.3em 0 0;
 }
