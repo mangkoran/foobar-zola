@@ -35,9 +35,7 @@
         <ul class="nav__list">
           {% for item in config.extra.navigation.items %}
           <li>
-            <a href="{{ get_url(path=item.url, trailing_slash=false) }}">
-              {{ item.text }}
-            </a>
+            <a href="{{ item.url | safe  }}"> {{ item.text }} </a>
           </li>
           {% endfor %}
         </ul>
