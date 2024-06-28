@@ -12,7 +12,8 @@ ul.nav__list li:not(:last-child) {
 }
 
 a[href^="http"]::after {
-  content: "\2B67";
+  content: "\2197";
   display: inline-block;
+  font-weight: 700;
   margin-left: 0.1em;
 }
