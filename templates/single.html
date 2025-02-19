@@ -7,6 +7,13 @@
     taxonomy.name %} {{ taxonomy.name | markdown(inline=true) | safe }} {% endif
     %}
   </h1>
+  {% if page.content and page.date %}
+  <p class="date">
+    <time datetime="{{ page.date }}">
+      {{ page.date | date(format="%b %d, %Y") }}
+    </time>
+  </p>
+  {% endif %}
   {% if page.content %} {{ page.content | safe }} {% elif section.content %} {{
   section.content | safe }} {% endif %} {% block list %}{% endblock %}
 </article>
