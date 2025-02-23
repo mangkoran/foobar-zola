@@ -1,12 +1,14 @@
 {% extends "index.html" %} {% block content %}
 
 <article>
-  <h1>
-    {% if page.title %} {{ page.title | markdown(inline=true) | safe }}
-    {% elif section.title %} {{ section.title | markdown(inline=true) | safe }}
-    {% elif taxonomy.name %} {{ taxonomy.name | markdown(inline=true) | safe }}
-    {% endif %}
-  </h1>
+  <div class="title">
+    <h1>
+      {% if page.title %} {{ page.title | markdown(inline=true) | safe }}
+      {% elif section.title %} {{ section.title | markdown(inline=true) | safe }}
+      {% elif taxonomy.name %} {{ taxonomy.name | markdown(inline=true) | safe }}
+      {% endif %}
+    </h1>
+  </div>
   {% if page.content and page.date %}
   <p class="date">
     <time datetime="{{ page.date }}">
