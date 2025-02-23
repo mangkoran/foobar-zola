@@ -10,11 +10,21 @@
     </h1>
   </div>
   {% if page.content and page.date %}
-  <p class="date">
-    <time datetime="{{ page.date }}">
-      {{ page.date | date(format="%b %d, %Y") }}
-    </time>
-  </p>
+  <div class="meta">
+    <p>
+      <span class="msr">calendar_today</span>
+      <time datetime="{{ page.date }}">
+        {{ page.date | date(format="%b %d, %Y") }}
+      </time>
+      &emsp;
+      <span class="msr">timer</span>
+      <span>
+        {{ page.reading_time }} min
+        <!-- {% if page.reading_time <= 1 %} minute {% else %} minutes {% endif %} -->
+        read
+      </span>
+    </p>
+  </div>
   {% endif %}
   {% if page.content %} {{ page.content | safe }}
   {% elif section.content %} {{ section.content | safe }}
